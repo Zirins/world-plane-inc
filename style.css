@@ -1,0 +1,396 @@
+:root {
+  --bg: #f5f7fb;
+  --surface: #ffffff;
+  --surface2: #f1f5ff;
+  --text: #0f172a;
+  --muted: #5b6477;
+  --border: rgba(15, 23, 42, 0.12);
+  --shadow: 0 14px 36px rgba(15, 23, 42, 0.12);
+
+  --blue: #2563eb;
+  --blue2: #1d4ed8;
+  --blueSoft: rgba(37, 99, 235, 0.12);
+
+  --pill: rgba(15, 23, 42, 0.06);
+  --danger: #b42318;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+.topbar {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.topbarInner {
+  height: 56px;
+  display: flex;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+}
+
+.brandMark {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  background: var(--blue);
+  color: #fff;
+  font-size: 16px;
+}
+
+.brandName {
+  color: var(--text);
+}
+
+.hero {
+  background: radial-gradient(1000px 500px at 20% 10%, #4f8cff, #1e4ac9 55%, #153a9f);
+  padding: 46px 0 28px;
+}
+
+.heroInner h1 {
+  margin: 0 0 18px;
+  color: #fff;
+  font-size: 40px;
+  letter-spacing: -0.02em;
+  font-weight: 750;
+}
+
+.searchCard {
+  background: var(--surface);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+
+.tripToggle {
+  display: inline-flex;
+  gap: 8px;
+  padding: 6px;
+  border-radius: 12px;
+  background: var(--pill);
+  margin-bottom: 14px;
+}
+
+.toggleInput {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.togglePill {
+  user-select: none;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-weight: 650;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.toggleInput:checked + .togglePill {
+  background: var(--blue);
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.25);
+}
+
+.searchGrid {
+  display: grid;
+  grid-template-columns: 1.25fr 1.25fr 1fr 1fr 0.75fr;
+  gap: 12px;
+  align-items: end;
+}
+
+.field label {
+  display: block;
+  margin: 0 0 6px;
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 650;
+}
+
+.inputShell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--border);
+  background: #fff;
+  border-radius: 12px;
+  padding: 10px 12px;
+  height: 44px;
+}
+
+.inputIcon {
+  opacity: 0.7;
+  font-size: 14px;
+}
+
+input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: var(--text);
+  background: transparent;
+}
+
+.inputShell:focus-within {
+  border-color: rgba(37, 99, 235, 0.55);
+  box-shadow: 0 0 0 4px var(--blueSoft);
+}
+
+.searchActions {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+button {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-weight: 700;
+  cursor: pointer;
+  background: #fff;
+  color: var(--text);
+}
+
+button.primary {
+  border-color: rgba(37, 99, 235, 0.35);
+  background: linear-gradient(180deg, var(--blue), var(--blue2));
+  color: #fff;
+  box-shadow: 0 12px 22px rgba(37, 99, 235, 0.25);
+}
+
+button.primary:hover {
+  filter: brightness(1.03);
+}
+
+button.ghost {
+  background: #fff;
+}
+
+button.ghost:hover {
+  background: rgba(15, 23, 42, 0.04);
+}
+
+button.small {
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+.resultsSection {
+  padding: 22px 0 50px;
+}
+
+.resultsHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin: 12px 0 14px;
+}
+
+.resultsHeader h2 {
+  margin: 0;
+  font-size: 22px;
+  letter-spacing: -0.01em;
+}
+
+.status {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.status.error {
+  color: var(--danger);
+}
+
+.resultsList {
+  display: grid;
+  gap: 12px;
+}
+
+.emptyCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px;
+  color: var(--muted);
+}
+
+.flightCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.06);
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 1.1fr 1.25fr 1.1fr auto;
+  gap: 16px;
+  align-items: center;
+}
+
+.airlineLine {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.airlineBadge {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: var(--surface2);
+  border: 1px solid rgba(37, 99, 235, 0.15);
+  display: grid;
+  place-items: center;
+  color: var(--blue);
+  font-weight: 900;
+}
+
+.airlineName {
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.flightId {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.timeBlock {
+  display: grid;
+  gap: 4px;
+}
+
+.timeRow {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+}
+
+.time {
+  font-size: 26px;
+  font-weight: 850;
+  letter-spacing: -0.02em;
+}
+
+.airport {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.metaBlock {
+  display: grid;
+  gap: 8px;
+  justify-items: center;
+}
+
+.duration {
+  color: var(--muted);
+  font-weight: 650;
+  font-size: 13px;
+}
+
+.stops {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 750;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.05);
+  color: var(--text);
+}
+
+.selectBtn {
+  justify-self: end;
+  border-color: rgba(37, 99, 235, 0.35);
+  background: linear-gradient(180deg, var(--blue), var(--blue2));
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-weight: 800;
+  min-width: 140px;
+}
+
+.selectBtn:hover {
+  filter: brightness(1.03);
+}
+
+.priceLine {
+  margin-top: 6px;
+  text-align: right;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+@media (max-width: 980px) {
+  .searchGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .heroInner h1 {
+    font-size: 32px;
+  }
+
+  .searchActions {
+    flex-direction: column;
+  }
+
+  .flightCard {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .selectBtn {
+    justify-self: stretch;
+    width: 100%;
+  }
+
+  .metaBlock {
+    justify-items: start;
+  }
+
+  .priceLine {
+    text-align: left;
+  }
+}

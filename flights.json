@@ -1,0 +1,74 @@
+[
+  {
+    "id": "WP101",
+    "airline": "World Plane",
+    "from": "JFK",
+    "to": "LAX",
+    "departTime": "08:30",
+    "arriveTime": "11:35",
+    "price": 249
+  },
+  {
+    "id": "WP102",
+    "airline": "World Plane",
+    "from": "JFK",
+    "to": "LAX",
+    "departTime": "13:10",
+    "arriveTime": "16:20",
+    "price": 289
+  },
+  {
+    "id": "SK220",
+    "airline": "SkyHop",
+    "from": "SFO",
+    "to": "SEA",
+    "departTime": "09:15",
+    "arriveTime": "11:05",
+    "price": 129
+  },
+  {
+    "id": "SK221",
+    "airline": "SkyHop",
+    "from": "SEA",
+    "to": "SFO",
+    "departTime": "17:40",
+    "arriveTime": "19:35",
+    "price": 119
+  },
+  {
+    "id": "GL450",
+    "airline": "GreenLeaf Air",
+    "from": "ORD",
+    "to": "MIA",
+    "departTime": "07:05",
+    "arriveTime": "11:20",
+    "price": 199
+  },
+  {
+    "id": "GL451",
+    "airline": "GreenLeaf Air",
+    "from": "MIA",
+    "to": "ORD",
+    "departTime": "12:30",
+    "arriveTime": "15:10",
+    "price": 209
+  },
+  {
+    "id": "RB330",
+    "airline": "RedBird",
+    "from": "DFW",
+    "to": "DEN",
+    "departTime": "10:00",
+    "arriveTime": "11:40",
+    "price": 149
+  },
+  {
+    "id": "RB331",
+    "airline": "RedBird",
+    "from": "DEN",
+    "to": "DFW",
+    "departTime": "15:25",
+    "arriveTime": "18:55",
+    "price": 159
+  }
+]
