@@ -1,133 +1,15 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flight Reservation Prototype v1</title>
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <header class="topbar">
-      <div class="container topbarInner">
-        <div class="brand" aria-label="World Plane, Inc.">
-          <span class="brandMark" aria-hidden="true">✈</span>
-          <span class="brandName">World Plane, Inc.</span>
-        </div>
-      </div>
-    </header>
 
-    <main>
-      <section class="hero">
-        <div class="container heroInner">
-          <h1>Book Your Next Adventure</h1>
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>WPI Flight Reservation System</title>
+    </head>
 
-          <div class="searchCard">
-            <form id="searchForm" class="searchForm">
-              <div class="tripToggle" role="tablist" aria-label="Trip type">
-                <input
-                  class="toggleInput"
-                  type="radio"
-                  id="roundTrip"
-                  name="tripType"
-                  value="round"
-                  checked
-                />
-                <label class="togglePill" for="roundTrip">Round Trip</label>
-
-                <input
-                  class="toggleInput"
-                  type="radio"
-                  id="oneWay"
-                  name="tripType"
-                  value="oneway"
-                />
-                <label class="togglePill" for="oneWay">One Way</label>
-              </div>
-
-              <div class="searchGrid">
-                <div class="field">
-                  <label for="fromInput">From</label>
-                  <div class="inputShell">
-                    <span class="inputIcon" aria-hidden="true">📍</span>
-                    <input
-                      id="fromInput"
-                      name="from"
-                      type="text"
-                      placeholder="City or Airport (e.g. JFK)"
-                      autocomplete="off"
-                      required
-                    />
-                  </div>
-                </div>
-
-                <div class="field">
-                  <label for="toInput">To</label>
-                  <div class="inputShell">
-                    <span class="inputIcon" aria-hidden="true">📍</span>
-                    <input
-                      id="toInput"
-                      name="to"
-                      type="text"
-                      placeholder="City or Airport (e.g. LAX)"
-                      autocomplete="off"
-                      required
-                    />
-                  </div>
-                </div>
-
-                <div class="field">
-                  <label for="departDate">Depart</label>
-                  <div class="inputShell">
-                    <span class="inputIcon" aria-hidden="true">📅</span>
-                    <input id="departDate" type="date" />
-                  </div>
-                </div>
-
-                <div class="field" id="returnField">
-                  <label for="returnDate">Return</label>
-                  <div class="inputShell">
-                    <span class="inputIcon" aria-hidden="true">📅</span>
-                    <input id="returnDate" type="date" />
-                  </div>
-                </div>
-
-                <div class="field">
-                  <label for="passengers">Passengers</label>
-                  <div class="inputShell">
-                    <span class="inputIcon" aria-hidden="true">👤</span>
-                    <input id="passengers" type="number" min="1" value="1" />
-                  </div>
-                </div>
-              </div>
-
-              <div class="searchActions">
-                <button id="searchBtn" type="submit" class="primary">
-                  Search Flights <span aria-hidden="true">→</span>
-                </button>
-                <button id="clearBtn" type="button" class="ghost">Clear</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </section>
-
-      <section class="container resultsSection">
-        <div class="resultsHeader">
-          <div>
-            <h2>Available Flights</h2>
-            <div id="status" class="status" aria-live="polite"></div>
-          </div>
-          <button id="modifyBtn" type="button" class="ghost small" hidden>
-            Modify Search
-          </button>
-        </div>
-
-        <div id="resultsBody" class="resultsList" aria-label="Flight search results">
-          <div class="emptyCard">Search to see available flights.</div>
-        </div>
-      </section>
-    </main>
-
-    <script src="./script.js"></script>
-  </body>
-</html>
+    <body>
+      <div id="root"></div>
+      <script type="module" src="/src/main.tsx"></script>
+    </body>
+  </html>
+  
