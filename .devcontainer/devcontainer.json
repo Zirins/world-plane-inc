@@ -1,0 +1,19 @@
+{
+    // Devcontainer for C# / .NET development
+    "name": "CS509 C# (.NET) Dev Container",
+    "image": "mcr.microsoft.com/vscode/devcontainers/dotnet:latest",
+    "runArgs": [
+        "--add-host",
+        "host.docker.internal:host-gateway"
+    ],
+    "extensions": [
+        "editorconfig.editorconfig", // EditorConfig support
+        "ms-dotnettools.csdevkit", // Docker support
+        "ms-dotnettools.csharp", // C# language support (OmniSharp)
+        "cweijan.vscode-mysql-client2"
+    ],
+    "settings": {
+        "editor.formatOnSave": true
+    },
+    "postCreateCommand": "sudo apt update"  
+}
